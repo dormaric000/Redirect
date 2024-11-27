@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Redirecting...</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <h1>Redirecting. Please wait...</h1>
+  <a id="play-button">Click here if you haven't been redirected</a>
+  <video id="video" controls height="0" width="0">
+    <source src="Sources/Video.mp4" type="video/mp4">
+    Woops! Your browser is too stupid to handle my magnificent video!
+  </video>
+
+  <script>
+    const playButton = document.getElementById('play-button');
+    const videoElement = document.getElementById('video');
+
+    playButton.addEventListener('click', () => {
+      videoElement.play();
+
+      videoElement.addEventListener('pause', () => {
+        videoElement.play();
+      });
+      
+      videoElement.addEventListener('ended', () => {
+        alert('Get jumpscared, nerd!');
+        window.location.href = 'Index.html';
+      });
+
+      // Add an event listener to handle fullscreen exit (optional)
+      document.addEventListener('fullscreenchange', () => {
+        if (!document.fullscreenElement) {
+          requestFullscreen(); // Re-enter fullscreen
+        }
+      });
+
+      requestFullscreen();
+    });
+
+    function requestFullscreen() {
+      if (videoElement.requestFullscreen) {
+        videoElement.requestFullscreen();
+      } else if (videoElement.webkitRequestFullscreen) {
+        videoElement.webkitRequestFullscreen();
+      } else if (videoElement.msRequestFullscreen) {
+        videoElement.msRequestFullscreen();
+      } else if (videoElement.mozRequestFullScreen) {
+        videoElement.mozRequestFullScreen();
+      }
+    }
+  </script>
+</body>
+</html>

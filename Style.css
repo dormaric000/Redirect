@@ -1,0 +1,11 @@
+body {
+    background-color: white;
+}
+a {
+    color:#0000FF;
+    
+}
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
