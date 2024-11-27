@@ -1,15 +1,19 @@
 # What is this?
 This is a website base to jumpscare your friends! Just customise the jumpscare and make a website from it using GitHub's pages feature!
+
 # How do I jumpscare my friends
 It's simple! Just follow these steps.
+
 ## Creating the repository
 1. Click 'Use this template' > 'Create a new repository'
 2. Fill in all the fields marked with a *. (name, owner, template, etc...)
 3. Make the repository PUBLIC. Making it private won't allow you to use GitHub Pages
 4. Create the repository
+
 ## Uploading the jumpscare
 1. Go to the Sources folder
 2. Upload a video (Note: Video must be named "Video.mp4" and have the .mp4 format)
+
 ## Making it a webpage
 1. Click settings at the top
 2. Click pages on the left
